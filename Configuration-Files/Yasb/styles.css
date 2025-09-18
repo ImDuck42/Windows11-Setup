@@ -1,0 +1,601 @@
+/* ================================================================================================== */
+/*                                         YASB THEME - CATPPUCCIN MOCHA                           */
+/* ================================================================================================== */
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 1. CSS VARIABLES & COLOR PALETTE                                                                  */
+/* -------------------------------------------------------------------------------------------------- */
+
+:root {
+	/* Catppuccin Mocha Color Palette */
+	--rosewater: rgb(245, 224, 220);
+	--flamingo: rgb(242, 205, 205);
+	--pink: rgb(245, 194, 231);
+	--mauve: rgb(203, 166, 247);
+	--red: rgb(243, 139, 168);
+	--maroon: rgb(235, 160, 172);
+	--peach: rgb(250, 179, 135);
+	--yellow: rgb(249, 226, 175);
+	--green: rgb(166, 227, 161);
+	--teal: rgb(148, 226, 213);
+	--sky: rgb(137, 220, 235);
+	--sapphire: rgb(116, 199, 236);
+	--blue: rgb(137, 180, 250);
+	--lavender: rgb(180, 190, 254);
+	--text: rgb(205, 214, 244);
+	--subtext1: rgb(186, 194, 222);
+	--subtext0: rgb(166, 173, 200);
+	--overlay2: rgb(147, 153, 178);
+	--overlay1: rgb(127, 132, 156);
+	--overlay0: rgb(108, 112, 134);
+	--surface2: rgb(88, 91, 112);
+	--surface1: rgb(69, 71, 90);
+	--surface0: rgb(40, 41, 54);
+	--base: rgb(30, 30, 46);
+	--mantle: rgb(24, 24, 37);
+	--crust: rgb(17, 17, 27);
+
+	/* Typography */
+	--font-family: "JetBrainsMono NFP";
+	--font-size-base: 12px;
+	--font-size-sm: 10px;
+	--font-size-md: 14px;
+	--font-size-lg: 16px;
+	--font-size-xl: 18px;
+	--font-weight-normal: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-weight-black: 900;
+
+	/* Spacing */
+	--spacing-xs: 2px;
+	--spacing-sm: 4px;
+	--spacing-md: 8px;
+	--spacing-lg: 10px;
+	--spacing-xl: 12px;
+	--spacing-2xl: 20px;
+
+	/* Border Radius */
+	--radius-sm: 3px;
+	--radius-md: 4px;
+	--radius-lg: 8px;
+	--radius-xl: 15px;
+	--radius-2xl: 20px;
+
+	/* Opacity Values */
+	--opacity-low: 0.4;
+	--opacity-medium: 0.85;
+	--opacity-high: 0.95;
+
+	/* Component Dimensions */
+	--widget-padding: 0 var(--spacing-lg);
+	--icon-size: var(--font-size-lg);
+	--button-height: 40px;
+	--slider-height: 10px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 2. GLOBAL RESET & BASE STYLES                                                                     */
+/* -------------------------------------------------------------------------------------------------- */
+
+* {
+	font-size: var(--font-size-base);
+	color: var(--text);
+	font-weight: var(--font-weight-black);
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 3. MAIN BAR LAYOUT                                                                                */
+/* -------------------------------------------------------------------------------------------------- */
+
+.yasb-bar {
+	padding: 0 var(--spacing-md);
+	margin: 0;
+	background-color: var(--base);
+	border-radius: var(--radius-xl);
+}
+
+.widget {
+	padding: var(--widget-padding);
+	margin: var(--spacing-md) var(--spacing-sm);
+	border-radius: var(--radius-lg);
+	background-color: var(--surface0);
+}
+
+.widget .label {
+	padding: var(--spacing-xs) var(--spacing-xs) 1px var(--spacing-xs);
+}
+
+.widget .label.alt {
+	padding: 1px var(--spacing-md) 1px var(--spacing-md);
+}
+
+.icon {
+	font-size: var(--icon-size);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 4. START MENU & HOME NAVIGATION                                                                   */
+/* -------------------------------------------------------------------------------------------------- */
+
+.start-menu .icon {
+	font-size: var(--font-size-xl);
+	color: var(--blue);
+}
+
+.home-menu {
+	background-color: var(--mantle);
+	border-radius: var(--radius-lg);
+	padding: 0;
+	margin-left: 0;
+}
+
+.home-menu .menu-item {
+	padding: var(--spacing-md) 48px var(--spacing-md) var(--spacing-xl);
+	font-size: 13px;
+	font-weight: var(--font-weight-semibold);
+}
+
+.home-menu .menu-item:hover {
+	background-color: var(--mauve);
+	color: var(--mantle);
+	margin: var(--spacing-sm) 6px;
+	border-radius: var(--radius-md);
+}
+
+.home-menu .separator {
+	max-height: 1px;
+	background-color: var(--surface2);
+	margin: 0 var(--spacing-md);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 5. CLOCK & CALENDAR                                                                               */
+/* -------------------------------------------------------------------------------------------------- */
+
+.clock-widget .icon {
+	color: var(--mauve);
+	font-size: var(--font-size-md);
+	margin-right: 7px;
+}
+
+.calendar {
+	background-color: var(--mantle);
+}
+
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+	background-color: transparent;
+	color: var(--overlay1);
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+.calendar .calendar-table::item:selected {
+	color: var(--base);
+	background: var(--mauve);
+	border-radius: var(--radius-lg);
+}
+
+.calendar .day-label {
+	margin-top: var(--spacing-2xl);
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+	font-size: var(--font-size-lg);
+	color: var(--text);
+	font-weight: var(--font-weight-bold);
+	min-width: 180px;
+	max-width: 180px;
+}
+
+.calendar .month-label {
+	font-weight: var(--font-weight-normal);
+	padding-bottom: var(--spacing-xl);
+}
+
+.calendar .date-label {
+	font-size: 88px;
+	font-weight: var(--font-weight-black);
+	color: var(--text);
+	margin-top: -var(--spacing-2xl);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 6. AUDIO & MEDIA CONTROLS                                                                         */
+/* -------------------------------------------------------------------------------------------------- */
+
+.volume-widget .icon {
+	color: var(--mauve);
+	margin: 1px var(--spacing-xs) 0 0;
+}
+
+.volume-slider {
+	border: none;
+}
+
+.volume-slider::groove {
+	color: transparent;
+}
+
+.volume-slider::handle {
+	background-color: transparent;
+}
+
+.audio-menu {
+	background-color: rgba(17, 17, 27, var(--opacity-low));
+}
+
+.audio-container .device {
+	background-color: transparent;
+	border: none;
+	padding: 6px var(--spacing-md) 6px var(--spacing-sm);
+	margin: var(--spacing-xs) 0;
+	font-size: var(--font-size-base);
+	border-radius: var(--radius-md);
+}
+
+.audio-container .device.selected {
+	background-color: rgba(255, 255, 255, 0.085);
+}
+
+.audio-container .device:hover {
+	background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Media Widget */
+.media-widget {
+	padding: 0;
+	margin-left: 0;
+}
+
+.media-widget .label {
+	color: var(--lavender);
+	padding-left: 5px;
+}
+
+.media-widget .btn {
+	max-width: 0;
+}
+
+/* Media Menu */
+.media-menu {
+	min-width: 420px;
+	max-width: 420px;
+	background-color: var(--base);
+	border-radius: var(--radius-lg);
+}
+
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-semibold);
+	margin-left: var(--spacing-lg);
+	font-family: 'Segoe UI';
+}
+
+.media-menu .artist {
+	font-size: 13px;
+	color: var(--mauve);
+	margin-top: 0;
+	margin-bottom: var(--spacing-md);
+}
+
+.media-menu .source {
+	font-size: 11px;
+	color: var(--crust);
+	font-weight: var(--font-weight-normal);
+	border-radius: var(--radius-sm);
+	background-color: var(--subtext1);
+	padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.media-menu .source.spotify {
+	background-color: #199143;
+	color: #ffffff;
+}
+
+.media-menu .source.windows-media {
+	background-color: #0078d4;
+	color: #ffffff;
+}
+
+.media-menu .btn {
+	font-family: "Segoe Fluent Icons";
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-normal);
+	margin: var(--spacing-lg) var(--spacing-xs) 0 var(--spacing-xs);
+	min-width: var(--button-height);
+	max-width: var(--button-height);
+	min-height: var(--button-height);
+	max-height: var(--button-height);
+	border-radius: var(--radius-2xl);
+	color: var(--overlay0);
+}
+
+.media-menu .btn.prev {
+	margin-left: var(--spacing-lg);
+}
+
+.media-menu .btn:hover {
+	color: var(--overlay2);
+}
+
+.media-menu .btn.play {
+	font-size: 24px;
+}
+
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+	color: #4e525c;
+	background-color: transparent;
+}
+
+.media-menu .playback-time {
+	font-size: 13px;
+	font-family: 'Segoe UI';
+	color: var(--mauve);
+	margin-top: var(--spacing-2xl);
+	min-width: 100px;
+}
+
+.media-menu .progress-slider {
+	height: var(--slider-height);
+	margin: 5px var(--spacing-sm);
+	border-radius: var(--radius-sm);
+}
+
+.media-menu .progress-slider::groove {
+	background: transparent;
+	height: var(--spacing-xs);
+	border-radius: var(--radius-sm);
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.media-menu .progress-slider::groove:hover {
+	background: transparent;
+	height: 6px;
+	border-radius: var(--radius-sm);
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.media-menu .progress-slider::sub-page {
+	background: var(--mauve);
+	border-radius: var(--radius-sm);
+	height: var(--spacing-sm);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 7. SYSTEM MONITORING WIDGETS                                                                      */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* CPU & Memory */
+.cpu-widget {
+	padding-right: 0;
+}
+
+.memory-widget {
+	padding-left: 0;
+}
+
+.cpu-widget .widget-container {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.memory-widget .widget-container {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.memory-widget .label,
+.cpu-widget .label {
+	min-width: 34px;
+	max-width: 34px;
+}
+
+.cpu-widget .icon,
+.memory-widget .icon {
+	color: var(--mauve);
+	margin-right: var(--spacing-sm);
+}
+
+/* Disk Widget */
+.disk-widget {
+	padding: 0 6px;
+}
+
+.disk-widget .icon {
+	color: var(--mauve);
+}
+
+.disk-group {
+	background-color: rgba(17, 17, 27, var(--opacity-low));
+}
+
+.disk-group-row {
+	min-width: 220px;
+	max-width: 220px;
+	max-height: var(--button-height);
+	margin: 0;
+	padding: 0;
+	border-radius: 6px;
+	border: 1px solid transparent;
+}
+
+.disk-group-row:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.disk-group-label-bar {
+	max-height: var(--spacing-md);
+	border: 0 solid transparent;
+	background-color: rgba(137, 180, 250, 0.1);
+	border-radius: var(--radius-md);
+}
+
+.disk-group-label-bar::chunk {
+	background-color: var(--mauve);
+	border-radius: var(--radius-md);
+}
+
+.disk-group-label {
+	font-size: var(--font-size-sm);
+}
+
+.disk-group-label-size {
+	font-size: var(--font-size-sm);
+	color: var(--mauve);
+}
+
+/* Network Traffic */
+.traffic-widget .icon {
+	color: var(--mauve);
+	padding-right: 6px;
+	padding-left: 6px;
+}
+
+.traffic-widget .label {
+	color: var(--mauve);
+}
+
+/* WiFi */
+.wifi-widget .icon {
+	color: var(--mauve) !important;
+}
+
+/* Audio Visualizer */
+.cava-widget {
+	padding: 0;
+	margin: var(--spacing-md) var(--spacing-sm);
+	background-color: var(--surface0);
+	border-radius: var(--radius-lg);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 8. UPDATE & POWER MANAGEMENT                                                                      */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* Update Checker */
+.update-check-widget {
+	padding: 0;
+}
+
+.update-check-widget .icon {
+	font-size: var(--icon-size);
+}
+
+.update-check-widget .widget-container.winget,
+.update-check-widget .widget-container.windows {
+	background: var(--mauve);
+	margin: 0;
+	border-radius: var(--spacing-lg);
+	border: 0 solid var(--sapphire);
+}
+
+.update-check-widget .widget-container.winget .icon,
+.update-check-widget .widget-container.windows .icon {
+	color: var(--base);
+	margin: 0 var(--spacing-xs) 0 6px;
+}
+
+.update-check-widget .widget-container.winget .label,
+.update-check-widget .widget-container.windows .label {
+	margin: 0 6px 0 1px;
+	color: var(--base);
+	font-weight: var(--font-weight-black);
+	font-size: var(--font-size-md);
+}
+
+/* Power Menu */
+.power-menu-widget .label {
+	color: var(--maroon);
+	font-size: var(--font-size-lg);
+	padding: 0;
+}
+
+.power-menu-popup {
+	background: var(--crust);
+	border-radius: var(--radius-lg);
+}
+
+.power-menu-popup .button {
+	padding: 0;
+	margin: 5px;
+	width: 250px;
+	height: 175px;
+	border-radius: var(--radius-lg);
+	background-color: var(--base);
+	color: white;
+}
+
+.power-menu-popup .button.hover {
+	background-color: var(--surface1);
+}
+
+.power-menu-popup .button .label {
+	margin-bottom: 0;
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-semibold);
+	color: var(--text);
+}
+
+.power-menu-popup .button .icon {
+	font-size: 55px;
+	padding-top: 25px;
+	padding-right: var(--spacing-lg);
+	color: var(--text);
+}
+
+.power-menu-popup .button.cancel .icon,
+.power-menu-popup .button.cancel .label {
+	color: var(--red);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 9. WALLPAPER GALLERY                                                                              */
+/* -------------------------------------------------------------------------------------------------- */
+
+.wallpapers-widget {
+	padding: 0 6px;
+}
+
+.wallpapers-widget .icon {
+	color: var(--mauve);
+}
+
+.wallpapers-gallery-window {
+	background-color: var(--mantle);
+	border: var(--spacing-xs);
+	margin: 0;
+}
+
+.wallpapers-gallery-image {
+  border: 3px solid transparent;
+  border-radius: var(--radius-lg);
+}
+
+.wallpapers-gallery-image.focused {
+  border-radius: var(--radius-lg);
+  border-color: var(--blue);
+}
+
+.wallpapers-gallery-buttons {
+	background-color: var(--base);
+	color: var(--text);
+	border: none;
+	font-size: var(--font-size-lg);
+	padding: var(--spacing-md) 0;
+	border-radius: var(--radius-lg);
+	margin: var(--spacing-md);
+	width: 600px;
+}
