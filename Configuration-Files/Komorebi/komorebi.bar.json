@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.38/schema.bar.json",
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.bar.json",
   "monitor": 0,
   "font_family": "JetBrains Mono",
   "theme": {
@@ -73,3 +73,4 @@
     }
   ]
 }
+
