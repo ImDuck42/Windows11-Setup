@@ -77,7 +77,7 @@ Before you begin, it's recommended to create a system restore point. First, down
 
 ## 7. Windows Theme
 
-1.  Copy the wallpapers folder from the [`Wallpapers`](./Configuration-Files/Wallpapers) directory into your `%USERPROFILE%/Pictures` folder.
+1.  Copy the [`Wallpapers`](./Configuration-Files/Wallpapers) directory into your `%USERPROFILE%/Pictures` folder.
 2.  Select the default Windows Dark theme and apply the previously installed cursor and the wallpaper from just now.
 3. In the Colors tab of the Personalization settings, set the the Accent Color to `#31314E` and enable `Show accentcolor on Start and taskbar`
 
