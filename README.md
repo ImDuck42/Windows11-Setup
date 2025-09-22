@@ -26,14 +26,12 @@ Before you begin, it's recommended to create a system restore point. First, down
 
 ## 2. Windhawk Configuration
 
-1.  After installing **Windhawk**, open it and navigate to `Settings > Advanced Settings > More Advanced Settings`.
-2.  Add `winlogon.exe` and `logonui.exe` to the **Process Inclusion List**.
-3.  Install the following mods from the Windhawk interface:
+1.  Install the following mods from the Windhawk interface:
     *   Windows 11 Notification Center Styler
     *   Windows 11 Start Menu Styler
     *   Windows 11 Taskbar Styler
-    *   UXTheme hook
-4.  For each styler, open its **Advanced Settings** and import the corresponding JSON file from the [`Configuration-Files/Windhawk-Mods`](./Configuration-Files/Windhawk-Mods) folder.
+    *   Translucent Windows
+2.  For each plugin, open its **Advanced Settings** and import the corresponding JSON file from the [`Configuration-Files/Windhawk-Mods`](./Configuration-Files/Windhawk-Mods) folder.
 
     *   **Note on Start Menu Styler**:
         *   Use `Windows 11 Start Menu Styler.json` if your search bar is enabled.
@@ -55,7 +53,7 @@ Before you begin, it's recommended to create a system restore point. First, down
     ```powershell
     komorebi start --whkd
     ```
-    *   **Troubleshooting**: If the bar doesn't appear, try `komorebi start --whkd --bar`. If that works, use `komorebic stop` and then try the original `komorebi start --whkd` command again.
+    *   **Troubleshooting**: If komorebi won't start or errors, try `komorebi start --whkd --bar`. If that works, use `komorebic stop` and then try the original `komorebi start --whkd` command again.
 
 ## 4. Yasb - Yet Another Status Bar
 
@@ -77,12 +75,11 @@ Before you begin, it's recommended to create a system restore point. First, down
 3.  Open Windows Settings and go to `Bluetooth & devices > Mouse > Additional mouse settings`.
 4.  In the **Pointers** tab, select the new cursor scheme from the dropdown menu and click **Apply**.
 
-## 7. Windows Theme and Wallpaper
+## 7. Windows Theme
 
-1.  Paste the contents of the [`Themes`](Configuration-Files/Windows-Theme/C/Windows/Resources/Themes) to `C:\Windows/Resources/Themes` | [`Catppuccin theme by niivu`](https://www.deviantart.com/niivu/art/Catppuccin-for-Windows-11-1076249390)
-2.  Adjust Wallpapers, Cursors and Accent colors as you like
-3.  Create a `Wallpapers` folder inside your user's `Pictures` directory (`%USERPROFILE%\Pictures`).
-4.  Copy the `Mocha-Dark.png` from [`Windows-Theme/Wallpapers`](./Configuration-Files/Windows-Theme/Wallpapers) into the new `Wallpapers` folder.  
+1.  Copy the wallpapers folder from the [`Wallpapers`](./Configuration-Files/Wallpapers) directory into your `%USERPROFILE%/Pictures` folder.
+2.  Select the default Windows Dark theme and apply the previously installed cursor and the wallpaper from just now.
+3. In the Colors tab of the Personalization settings, set the the Accent Color to `#31314E` and enable `Show accentcolor on Start and taskbar`
 
-    `Optional`
-3.  Navigate to [`Windows-Theme`](./Configuration-Files/Windows-Theme) and double-click the `Catppuccin-Moccha.deskthemepack` file to install and apply the theme.
+## 8. Restart Your PC
+1.  I hope you know how to do that
