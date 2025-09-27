@@ -209,7 +209,7 @@
 }
 
 /* -------------------------------------------------------------------------------------------------- */
-/* 6. AUDIO & MEDIA CONTROLS                                                                         */
+/* 6. AUDIO CONTROLS                                                                         */
 /* -------------------------------------------------------------------------------------------------- */
 
 .volume-widget .icon {
@@ -248,129 +248,6 @@
 
 .audio-container .device:hover {
 	background-color: rgba(255, 255, 255, 0.06);
-}
-
-/* Media Widget */
-.media-widget {
-	padding: 0;
-	margin-left: 0;
-}
-
-.media-widget .label {
-	color: var(--lavender);
-	padding-left: 5px;
-}
-
-.media-widget .btn {
-	max-width: 0;
-}
-
-/* Media Menu */
-.media-menu {
-	min-width: 420px;
-	max-width: 420px;
-	background-color: var(--base);
-	border-radius: var(--radius-lg);
-}
-
-.media-menu .title,
-.media-menu .artist,
-.media-menu .source {
-	font-size: var(--font-size-md);
-	font-weight: var(--font-weight-semibold);
-	margin-left: var(--spacing-lg);
-	font-family: 'Segoe UI';
-}
-
-.media-menu .artist {
-	font-size: 13px;
-	color: var(--mauve);
-	margin-top: 0;
-	margin-bottom: var(--spacing-md);
-}
-
-.media-menu .source {
-	font-size: 11px;
-	color: var(--crust);
-	font-weight: var(--font-weight-normal);
-	border-radius: var(--radius-sm);
-	background-color: var(--subtext1);
-	padding: var(--spacing-xs) var(--spacing-sm);
-}
-
-.media-menu .source.spotify {
-	background-color: #199143;
-	color: #ffffff;
-}
-
-.media-menu .source.windows-media {
-	background-color: #0078d4;
-	color: #ffffff;
-}
-
-.media-menu .btn {
-	font-family: "Segoe Fluent Icons";
-	font-size: var(--font-size-xl);
-	font-weight: var(--font-weight-normal);
-	margin: var(--spacing-lg) var(--spacing-xs) 0 var(--spacing-xs);
-	min-width: var(--button-height);
-	max-width: var(--button-height);
-	min-height: var(--button-height);
-	max-height: var(--button-height);
-	border-radius: var(--radius-2xl);
-	color: var(--overlay0);
-}
-
-.media-menu .btn.prev {
-	margin-left: var(--spacing-lg);
-}
-
-.media-menu .btn:hover {
-	color: var(--overlay2);
-}
-
-.media-menu .btn.play {
-	font-size: 24px;
-}
-
-.media-menu .btn.disabled:hover,
-.media-menu .btn.disabled {
-	color: #4e525c;
-	background-color: transparent;
-}
-
-.media-menu .playback-time {
-	font-size: 13px;
-	font-family: 'Segoe UI';
-	color: var(--mauve);
-	margin-top: var(--spacing-2xl);
-	min-width: 100px;
-}
-
-.media-menu .progress-slider {
-	height: var(--slider-height);
-	margin: 5px var(--spacing-sm);
-	border-radius: var(--radius-sm);
-}
-
-.media-menu .progress-slider::groove {
-	background: transparent;
-	height: var(--spacing-xs);
-	border-radius: var(--radius-sm);
-	background: rgba(255, 255, 255, 0.1);
-}
-
-.media-menu .progress-slider::groove:hover {
-	background: transparent;
-	height: 6px;
-	border-radius: var(--radius-sm);
-	background: rgba(255, 255, 255, 0.2);
-}
-
-.media-menu .progress-slider::sub-page {
-	background: var(--mauve);
-	border-radius: var(--radius-sm);
-	height: var(--spacing-sm);
 }
 
 /* -------------------------------------------------------------------------------------------------- */
