@@ -31,7 +31,6 @@ bars:
     padding:
       top: 9
       left: 9
-      bottom: 9
       right: 9
     widgets:
       left:
@@ -42,7 +41,6 @@ bars:
           "cpu",
           "memory",
           "traffic",
-          "media",
         ]
       center:
         [
@@ -120,54 +118,6 @@ widgets:
         left: 0
         bottom: 0
         right: 0
-  media:
-    type: "yasb.media.MediaWidget"
-    options:
-      label: "<span>\udb80\udf87</span> {title}"
-      label_alt: "<span>\udb80\udf87</span> {title}"
-      hide_empty: true
-      callbacks:
-       on_left: "toggle_media_menu"
-       on_middle: "do_nothing"
-       on_right: "toggle_label"
-      max_field_size:
-        label: 50
-        label_alt: 50
-      show_thumbnail: false
-      controls_only: false
-      controls_left: true
-      thumbnail_alpha: 50
-      thumbnail_padding: 0
-      thumbnail_corner_radius: 8
-      icons:
-        prev_track: "\ue892"
-        next_track: "\ue893"
-        play: "\ue768"
-        pause: "\ue769"
-      media_menu:
-       blur: true
-       round_corners: true
-       round_corners_type: "normal"
-       border_color: "#cba6f7"
-       alignment: "right"
-       direction: "down"
-       offset_top: 6
-       offset_left: 0
-       thumbnail_corner_radius: 8
-       thumbnail_size: 120
-       max_title_size: 80
-       max_artist_size: 20
-       show_source: true
-      media_menu_icons:
-       play: "\ue768"
-       pause: "\ue769"
-       prev_track: "\ue892"
-       next_track: "\ue893"
-      label_shadow:
-       enabled: true
-       color: "black"
-       radius: 3
-       offset: [ 1, 1 ]
   clock:
     type: "yasb.clock.ClockWidget"
     options:
