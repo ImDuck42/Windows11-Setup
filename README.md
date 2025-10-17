@@ -3,7 +3,7 @@
 This guide will walk you through setting up a customized Windows 11 experience using the necessary configuration files located in the [`Configuration-Files`](./Configuration-Files) directory.
 
 <details>
-  <summary><b>Win11-Setup Previews</b></summary>
+  <summary><b>Win11-Setup Previews</b>(Not Updated for switch to Translucent Windows)</summary>
 
   <img src="./Images/Desktop.png" alt="Desktop" style="max-width:420px;">  
   <img src="./Images/Flow.png" alt="Flow" style="max-width:420px;">  
@@ -83,3 +83,4 @@ Before you begin, it's recommended to create a system restore point. First, down
 
 ## 8. Restart Your PC
 1.  I hope you know how to do that
+
