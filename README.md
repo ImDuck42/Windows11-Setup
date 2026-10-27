@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> Repository Archived, I no longer use Windows and won't update it to the newest Win11 Version
+> Repository Archived, I no longer use Windows and won't update it to the newest Win11 Version  
 > Also most json settings will probably be broken
 
 # Windows 11 Customization Guide
